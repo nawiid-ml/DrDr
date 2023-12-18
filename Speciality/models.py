@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils import timezone
+# from django.utils import timezone
 
 class speciality(models.Model):
     Name = models.CharField(max_length=100)
