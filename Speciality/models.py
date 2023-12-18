@@ -20,6 +20,6 @@ class reserve(models.Model):
     time = models.DateTimeField()
 
 class comment(models.Model):
-    user = models.CharField()
+    user = models.CharField(max_length=100)
     comment = models.TextField()
     doctor = models.ForeignKey(doctor, on_delete=models.CASCADE)
