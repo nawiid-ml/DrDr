@@ -1,4 +1,4 @@
-from django.contrib.admin import ModelAdmin,register
+from django.contrib.admin import ModelAdmin, register
 from .models import speciality, doctor, patient, reserve, comment
 
 @register(speciality)

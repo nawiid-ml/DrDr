@@ -15,11 +15,11 @@ class patient(models.Model):
     Age=models.PositiveIntegerField()
 
 class reserve(models.Model):
-    bimar = models.ForeignKey(patient, on_delete=models.CASCADE)
-    docti = models.ForeignKey(doctor, on_delete=models.CASCADE)
-    time = models.DateTimeField()
+    Bimar = models.ForeignKey(patient, on_delete=models.CASCADE)
+    Doctor = models.ForeignKey(doctor, on_delete=models.CASCADE)
+    Time = models.DateTimeField()
 
 class comment(models.Model):
-    user = models.CharField(max_length=100)
-    comment = models.TextField()
-    doctor = models.ForeignKey(doctor, on_delete=models.CASCADE)
+    User = models.CharField(max_length=100)
+    Comment = models.TextField()
+    Doctor = models.ForeignKey(doctor, on_delete=models.CASCADE)
