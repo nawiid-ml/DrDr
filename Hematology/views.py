@@ -11,6 +11,6 @@ def List(request):
                 'Name' : doci.Name,
                 'Specialty' : doci.Specialty.Name
             })
-    return JsonResponse(request, hemato_doctor_list, safe=False)
+    return JsonResponse(hemato_doctor_list, safe=False)
 
 
