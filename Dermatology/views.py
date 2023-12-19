@@ -15,5 +15,3 @@ def List(request):
     return JsonResponse(request, derma_doctor_list, safe=False)
 
 
-
-
