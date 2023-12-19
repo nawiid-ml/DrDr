@@ -1,7 +1,7 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render
 from Specialty.models import doctor
-
+#ریه
 def List(request):
     doctor_list = doctor.objects.all()
     pulmono_doctor_list = []

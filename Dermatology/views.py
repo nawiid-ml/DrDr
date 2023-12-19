@@ -1,8 +1,7 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render
 from Specialty.models import doctor
-
-# Create your views here.
+#پوست
 def List(request):
     doctor_list = doctor.objects.all()
     derma_doctor_list = []
