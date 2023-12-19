@@ -4,22 +4,24 @@ from .models import speciality, doctor, patient, reserve, comment
 
 @register(speciality)
 class speciality_admin(ModelAdmin):
-    pass
+    list_display =['Name']
 
 @register(doctor)
 class doctor_admin(ModelAdmin):
-    pass
+    list_display =['Name','Speciality']
+    search_fields =['Speciality']
 
 @register(patient)
 class patient_admin(ModelAdmin):
-    pass
+    list_display =['Name']
 
 @register(reserve)
 class reserve_admin(ModelAdmin):
-    pass
+    list_filter =['Time']
+    search_fields =['Doctor']
 
 @register(comment)
 class comment_admin(ModelAdmin):
-    pass
+    list_display=['User','Doctor']
 
 
