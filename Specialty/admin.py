@@ -8,8 +8,8 @@ class speciality_admin(ModelAdmin):
 
 @register(doctor)
 class doctor_admin(ModelAdmin):
-    list_display =['Name','Speciality']
-    search_fields =['Speciality']
+    list_display =['Name','Specialty']
+    search_fields =['Specialty']
 
 @register(patient)
 class patient_admin(ModelAdmin):
