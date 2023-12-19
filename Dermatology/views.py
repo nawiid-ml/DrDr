@@ -1,6 +1,6 @@
 from django.http.response import JsonResponse
 from django.shortcuts import render
-from Speciality.models import doctor
+from Specialty.models import doctor
 
 # Create your views here.
 def List(request):
