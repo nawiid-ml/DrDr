@@ -1,7 +1,8 @@
-from django.http.response import JsonResponse
+from django.http.response import JsonResponse, HttpResponse
 from django.shortcuts import render
 from Specialty.models import doctor
 #پوست
+
 def List(request):
     doctor_list = doctor.objects.all()
     derma_doctor_list = []
@@ -11,6 +12,7 @@ def List(request):
                 'Name' : doci.Name,
                 'Speciality' : doci.Specialty.Name
             })
-    return JsonResponse(request, derma_doctor_list, safe=False)
+    return JsonResponse(derma_doctor_list, safe=False)
 
-
+def List2(request):
+    return HttpResponse('Hi from derma app')

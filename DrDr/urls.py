@@ -19,12 +19,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Specialty/',include('Specialty.urls')),
-    path('Pulmonology/',include('Pulmonology.urls')),
-    path('Neurology/',include('Neurology.urls')),
-    path('Nephrology/',include('Nephrology.urls')),
-    path('Hematology/',include('Hematology.urls')),
-    path('Dermatology/',include('Dermatology.urls')),
-    path('Cardiology/',include('Cardiology.urls'))
-    
+    path('specialty/', include('Specialty.urls')),
+    # path('Pulmonology/',include('Pulmonology.urls')),
+    # path('Neurology/',include('Neurology.urls')),
+    # path('Nephrology/',include('Nephrology.urls')),
+    # path('Hematology/',include('Hematology.urls')),
+    # path('Dermatology/',include('Dermatology.urls')),
+    # path('Cardiology/',include('Cardiology.urls'))
 ]
