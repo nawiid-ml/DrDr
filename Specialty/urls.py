@@ -4,11 +4,9 @@ from .views import List
 urlpatterns = [
     path('', List),
     path('dermatology/', include('Dermatology.urls')),
-    path('Pulmonology/',include('Pulmonology.urls')),
-    path('Neurology/',include('Neurology.urls')),
-    path('Nephrology/',include('Nephrology.urls')),
-    path('Hematology/',include('Hematology.urls')),
-    path('Dermatology/',include('Dermatology.urls')),
-    path('Cardiology/',include('Cardiology.urls'))
+    path('pulmonology/',include('Pulmonology.urls')),
+    path('neurology/',include('Neurology.urls')),
+    path('nephrology/',include('Nephrology.urls')),
+    path('hematology/',include('Hematology.urls')),
+    path('cardiology/',include('Cardiology.urls'))
 ]
-
