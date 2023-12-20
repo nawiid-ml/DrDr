@@ -1,4 +1,4 @@
-from django.http.response import JsonResponse
+from django.http.response import JsonResponse, HttpResponse
 from django.shortcuts import render
 from Specialty.models import doctor
 #قلب
@@ -12,6 +12,7 @@ def List(request):
                 'Specialty' : doci.Specialty.Name
             })
     return JsonResponse(cardio_doctor_list, safe=False)
+
 
 
 
