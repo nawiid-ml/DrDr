@@ -13,6 +13,15 @@ def List(request):
             })
     return JsonResponse(neuro_doctor_list, safe=False)
 
-
+def List_html(request):
+    doctors = doctor.objects.all()
+    doctors_list = []
+    for item in doctors:
+        print(item.Specialty.Name)
+        if item.Specialty.Name == 'Neurology':
+            print('Found')
+            doctors_list.append(item)
+    doctors_json = {'Doctor' : doctors_list}
+    return render(request, 'Neurology/neurology.html', doctors_json)
 
 
