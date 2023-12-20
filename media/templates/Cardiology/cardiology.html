@@ -23,39 +23,29 @@
                         <a class="nav-link active" aria-current="page" href="/">خانه</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Specialty/list">پزشکان
-                            
-                        </a>
+                        <a class="nav-link active" aria-current="page" href="/specialty/">تخصص ها</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <h1>تخصصها</h1>
+    <h1>متخصص ها</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th> نام پزشک</th>
-                <th> تخصص </th>
-                <th> امتیاز </th>
-                <th> تعداد امتیاز دهندگان </th>
+                <th> نام دکتر</th>
                 <th>  </th>
             </tr>
         </thead>
         <tbody>
-            {% for item in doctor %}
+            {% for item in Doctor %}
                 <tr>
                     <td>{{ item.Name }}</td>
-                    <td>{{ item.Specialty }}</td>
-                    <td>{{ item.Sum_Scores }}</td>
-                    <td>{{ item.Count_Scores }}</td>
-                    <td> <button type="button" class="btn btn-primary">دریافت نوبت</button> </td>
+                        <td> <button type="button" class="btn btn-primary" >دریافت نوبت</button></td>
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-
-
 </body>
 </html>

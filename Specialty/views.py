@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse, JsonResponse
-from .models import speciality
+from .models import speciality, doctor
 # Create your views here.
 
 def List(request):
@@ -11,3 +11,8 @@ def List(request):
             'Specialty' : item.Name
         })
     return JsonResponse(specialty_json, safe=False)
+
+def List_html(request):
+    specialities = speciality.objects.all()
+    specialities_json = {'Specialty':specialities}
+    return render(request, 'Specialty/index.html', specialities_json)

@@ -11,8 +11,10 @@ class doctor(models.Model):
     Specialty = models.ForeignKey(speciality, on_delete=models.CASCADE)
     Sum_Scores=models.FloatField(default=0, editable=False)
     Count_Scores=models.FloatField(default=0, editable=False)
+    Average_Score=models.FloatField(default=0, editable=False)
     def __str__(self):
         return self.Name
+
 
 class patient(models.Model):
     Name=models.CharField(max_length=200)
