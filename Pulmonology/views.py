@@ -13,6 +13,17 @@ def List(request):
             })
     return JsonResponse(pulmono_doctor_list, safe=False)
 
+def List_html(request):
+    doctors = doctor.objects.all()
+    doctors_list = []
+    for item in doctors:
+        print(item.Specialty.Name)
+        if item.Specialty.Name == 'Pulmonology':
+            
+            doctors_list.append(item)
+    doctors_json = {'Doctor' : doctors_list}
+    return render(request, 'Pulmonology/pulmonology.html', doctors_json)
+
 
 
 
