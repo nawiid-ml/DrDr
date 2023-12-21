@@ -20,7 +20,7 @@ def List_html(request):
         if item.Specialty.Name == 'Cardiology':
             doctors_list.append(item)
     doctors_json = {'Doctor' : doctors_list}
-    return render(request, 'Cardiology/cardiology.html', doctors_json)
+    return render(request, 'Logy/logy.html', doctors_json)
 
 
 

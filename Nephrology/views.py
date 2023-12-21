@@ -22,7 +22,7 @@ def List_html(request):
             
             doctors_list.append(item)
     doctors_json = {'Doctor' : doctors_list}
-    return render(request, 'Nephrology/nephrology.html', doctors_json)
+    return render(request, 'Logy/logy.html', doctors_json)
 
 
 
