@@ -40,11 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Specialty',
     'Cardiology',
-    'Dermatology',
-    'Hematology',
-    'Nephrology',
-    'Neurology',
-    'Pulmonology',
 ]
 
 MIDDLEWARE = [
