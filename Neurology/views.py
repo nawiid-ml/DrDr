@@ -22,6 +22,6 @@ def List_html(request):
             print('Found')
             doctors_list.append(item)
     doctors_json = {'Doctor' : doctors_list}
-    return render(request, 'Neurology/neurology.html', doctors_json)
+    return render(request, 'Logy/logy.html', doctors_json)
 
 

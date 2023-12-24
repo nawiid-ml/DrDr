@@ -13,4 +13,11 @@ def List(request):
             })
     return JsonResponse(hemato_doctor_list, safe=False)
 
-
+def List_html(request):
+    doctors = doctor.objects.all()
+    doctors_list = []
+    for item in doctors:
+        if item.Specialty.Name == 'Hematology':
+            doctors_list.append(item)
+    doctors_json = {'Doctor' : doctors_list}
+    return render(request, 'Logy/logy.html', doctors_json)

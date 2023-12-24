@@ -14,9 +14,6 @@ def List(request):
             })
     return JsonResponse(derma_doctor_list, safe=False)
 
-def List2(request):
-    return HttpResponse('Hi from derma app')
-
 def List_html(request):
     doctors = doctor.objects.all()
     doctors_list = []
@@ -26,4 +23,4 @@ def List_html(request):
             print('Found')
             doctors_list.append(item)
     doctors_json = {'Doctor' : doctors_list}
-    return render(request, 'Dermatology/dermatology.html', doctors_json)
+    return render(request, 'Logy/logy.html', doctors_json)

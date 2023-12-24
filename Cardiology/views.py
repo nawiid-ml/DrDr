@@ -17,12 +17,10 @@ def List_html(request):
     doctors = doctor.objects.all()
     doctors_list = []
     for item in doctors:
-        print(item.Specialty.Name)
         if item.Specialty.Name == 'Cardiology':
-            print('Found')
             doctors_list.append(item)
     doctors_json = {'Doctor' : doctors_list}
-    return render(request, 'Cardiology/cardiology.html', doctors_json)
+    return render(request, 'Logy/logy.html', doctors_json)
 
 
 
